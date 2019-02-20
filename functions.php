@@ -29,6 +29,55 @@ register_nav_menus(
 
 // Add Customization
 function jc_customize_register($wp_customize){
+    // Add Logo
+    $wp_customize->add_section('jc-logo-section',array(
+        'title' => __('Logo')
+    ));
+    // Logo Setting
+    $wp_customize->add_setting('jc-logo',array(
+        'default' => __('Logo'),
+        'type' => 'theme_mod'
+    ));
+    // Logo Control
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'jc-logo-control',array(
+        'label' => __('Logo Image'),
+        'settings' => 'jc-logo',
+        'section' => 'jc-logo-section',
+    )));
+    
+// Add Home Image
+$wp_customize->add_section('jc-home-image-section',array(
+    'title' => __('Home Image')
+));
+// Home Image Setting
+$wp_customize->add_setting('jc-home-image',array(
+    'default' => __('Home Image','Jeff Portfolio'),
+    'type' => 'theme_mod'
+));
+// Home Image Control
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'jc-home-image-control',array(
+    'label' => __('Home Image','Jeff Portfolio'),
+    'section' => 'jc-home-image-section',
+    'settings' => 'jc-home-image'
+)));
+
+
+    // Add About Image
+    $wp_customize->add_section('jc-about-section',array(
+        'title' => __('About Image','Jeff Portfolio')
+    ));
+    // About Image Setting
+    $wp_customize->add_setting('jc-about-image', array(
+        'default' => __('About Image','Jeff Portfolio'),
+        'type' => 'theme_mod'
+    ));
+    // About Image Control
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'jc-about-image-control',array(
+        'label' => __('About Image'),
+        'section' => 'jc-about-section',
+        'settings' => 'jc-about-image'
+    )));
+
     // Portfolio Add Section
     $wp_customize->add_section('jc-portfolio-section',array(
         'title' => __('Portfolio Section')
@@ -257,7 +306,24 @@ function jc_customize_register($wp_customize){
         'type' => 'dropdown-pages',
     )));
     
-    
+    // Add Contact 
+    $wp_customize->add_section('jc-contact-section',array(
+        'title' => __('Contact Section','Jeff Portfolio') 
+    ));
+    // Contact Setting
+    $wp_customize->add_setting('jc-contact-image',array(
+        'default' => __('Contact Image', 'Jeff Portfolio'),
+        'type' => 'theme_mod'
+    ));
+    // Contact Control
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'jc-contact-image-control',array(
+        'label' => __('Contact Image', 'Jeff Portfolio'),
+        'section' => 'jc-contact-section',
+        'settings' => 'jc-contact-image'
+    )));
     
 }
 add_action('customize_register','jc_customize_register');
+
+
+

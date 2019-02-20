@@ -1,15 +1,15 @@
 <?php /* Template Name: Work */ ?>
 <?php   get_header();   ?>
 <main id="swup" class="f">
-   <div class="logo"><a href="<?php echo get_home_url();?>"><img src="<?php echo get_template_directory_uri().'/assets/images/logo.png';?>"></a></div>
+   <div class="logo"><a href="<?php echo get_home_url();?>"><img src="<?php echo get_theme_mod('jc-logo');?>"></a></div>
    <nav id="navbar">
       <!-- Mobile Navigation -->
       <div class="navbar-social transition-up-social">
          <ul>
-            <li><a href="https://github.com/jeppjob"><span class="icon-github"></span></a></span></li>
-            <li><a href="https://www.behance.net/jeffcadampog"><span class="icon-behance"></a></span></li>
-            <li><a href="https://dribbble.com/jeffcadampog"><span class="icon-dribbble"></a></span></li>
-            <li><a href="https://codepen.io/jeffcadampog"><span class="icon-codepen"></a></span></li>
+         <li><a href="https://github.com/jeppjob"><span class="icon-github"></span></a></li>
+            <li><a href="https://www.behance.net/jeffcadampog"><span class="icon-behance"></span></a></li>
+            <li><a href="https://dribbble.com/jeffcadampog"><span class="icon-dribbble"></span></a></li>
+            <li><a href="https://codepen.io/jeffcadampog"><span class="icon-codepen"></span></a></li>
          </ul>
       </div>
       <div class="navbar-links transition-right">
