@@ -1,9 +1,6 @@
 <?php wp_footer(); ?>
-<!--<script>
-let options = {
-   LINK_SELECTOR:'a[href^="/"]:not([data-no-swup]), a[href^="' + window.location.origin + '"]:not([data-no-swup])'
-};
+<script>
 
-const swup = new Swup(options);</script>-->
+const swup = new Swup();</script>
 </body>
 </html>

@@ -1,10 +1,16 @@
 <?php
 
+
+function jc_theme_support(){
+    add_theme_support('title-tag');
+}
+add_action('after_setup_theme','jc_theme_support');
+
 // Loading scripts function
 function jc_load_scripts(){
 
     // Load JS files
-    wp_register_script('swup_js', get_template_directory_uri() . '/node_modules/swup/dist/swup.js', array('jquery'), '1.2', true);
+    wp_register_script('swup_js', get_template_directory_uri() . '/node_modules/swup/dist/swup.min.js', array('jquery'), '1.2', true);
     wp_enqueue_script('swup_js');
     wp_register_script('main_script', get_template_directory_uri().'/js/main.js',array('jquery'),1, true);
     wp_enqueue_script('main_script');
