@@ -25,29 +25,13 @@
       <!-- My About Section JC-->
       <section class="home">
          <div class="home-content transition-left">
-         <?php if (have_post) : while(have_posts()) : the_post(); ?>
-         <?php the_content(); ?>
-        <?php endwhile; endif;?>
+         <?php while(have_posts()){
+            the_post();
+        }
+        the_content();?>
          </div>
          <div class="home-img"><img class="" src="<?php echo get_theme_mod('jc-home-image'); ?>"></div>
       </section>
    </div>
-   <!-- My Contact Section JC-->
-   <section class="contact">
-      <span class="close"></span>
-      <div class="contact-img"></div>
-      <div class="contact-content">
-         <h1>Say Hello!</h1>
-         <p>If you have any questions or just want to say hi, feel free to use the form below. </p>
-         <form name="contact" method="POST" data-netlify="true">
-            <input type="text" placeholder="Name" name="name">
-            <input type="text" placeholder="Email" name="email">
-            <textarea placeholder="Message" name="message" id="" cols="30" rows="10"></textarea>
-            <div data-netlify-recaptcha="true"></div>
-            <input name="send" type="submit" value="Send">
-         </form>
-      </div>
-   </section>
-</main>
 
 <?php   get_footer();   ?>

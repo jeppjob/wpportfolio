@@ -1,5 +1,5 @@
 <?php   get_header();   ?>
-<main id="swup" class="f">
+<main id="swup">
    <div class="logo"><a href="<?php echo get_home_url();?>"><img src="<?php echo get_theme_mod('jc-logo');?>"></a></div>
    <nav id="navbar">
       <!-- Mobile Navigation -->
@@ -33,22 +33,5 @@
         </div>
       </section>
     </div>
-   <!-- My Contact Section JC-->
-   <section class="contact">
-      <span class="close"></span>
-      <div class="contact-img"></div>
-      <div class="contact-content">
-         <h1>Say Hello!</h1>
-         <p>If you have any questions or just want to say hi, feel free to use the form below. </p>
-         <form name="contact" method="POST" data-netlify="true">
-            <input type="text" placeholder="Name" name="name">
-            <input type="text" placeholder="Email" name="email">
-            <textarea placeholder="Message" name="message" id="" cols="30" rows="10"></textarea>
-            <div data-netlify-recaptcha="true"></div>
-            <input name="send" type="submit" value="Send">
-         </form>
-      </div>
-   </section>
-</main>
 
 <?php   get_footer();   ?>

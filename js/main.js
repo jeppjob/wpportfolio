@@ -1,3 +1,4 @@
+document.addEventListener("swup:pageView", function () {
     //Menu
     let navbarLinks = document.querySelector(".navbar-links");
     let navbarSocial = document.querySelector(".navbar-social");
@@ -37,3 +38,4 @@
             wrapper.classList.toggle("blur");
         }
     });
+});

@@ -1,4 +1,3 @@
-<?php /* Template Name: About */ ?>
 <?php   get_header();   ?>
 <main id="swup">
    <div class="logo"><a href="<?php echo get_home_url();?>"><img src="<?php echo get_theme_mod('jc-logo');?>"></a></div>
@@ -23,23 +22,21 @@
       </div>
    </nav>
    <div id="wrapper">
-      <!-- My About Section JC-->
-      <section id="about" class="about">
-        <div class="about-img  transition-left">
-           <?php 
-           $alt_text = get_post_meta($post->ID, '_wp_attachment_image_alt', true);
-           ?>
-          <img src="<?php echo get_theme_mod('jc-about-image');?>" alt="<?php echo $alt_text; ?>">
-        </div>
-        <div class="about-content  transition-up">
-        <?php 
+       <!-- My Work Section JC -->
+       <section class="work-page">
+       <div class="work-page-container">
+       <h2><?php the_title();?></h2>
+
+       <p>
+       <?php
         while(have_posts()){
-           the_post();
+            the_post();
         }
         the_content();
-        ?>
+       ?>
+       </p>
         </div>
       </section>
-   </div>
-  
+    </div>
+
 <?php   get_footer();   ?>
