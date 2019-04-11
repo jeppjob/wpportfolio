@@ -213,8 +213,33 @@ a {
   display: block;
   margin: 0 auto;
   height: auto;
+  width: 50%;
+  position: relative;
 }
-
+.about-img::before{
+  content: '';
+  position: absolute;
+  top: -5%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  border: 2px solid #838383;
+  animation: aboutbeforeanimation 20s infinite;
+}
+.about-img::after{
+  content: '';
+    position: absolute;
+    bottom: -5%;
+    right: -10%;
+    width: 50%;
+    height: 50%;
+    background: #707070;
+    z-index: -1;
+    animation: aboutafteranimation 20s infinite 2s;
+}
+.about-img img{
+  animation: aboutanimation 20s infinite 1s;
+}
 /* Work Section JC*/
 .work {
   padding: 0em 1em;
@@ -276,6 +301,10 @@ a {
   font-weight: 300;
   margin-bottom: 2em;
 }
+.work-page-title{
+  font-size: 2em;
+  margin-bottom: .5em;
+}
 .work-page-container p{
   font-family: "Roboto", sans-serif;
 }
@@ -332,9 +361,9 @@ a {
   width: 100%;
 }
 .contact form input[type="text"],
-.contact form textarea {
+.contact form textarea,.contact form input[type="email"] {
   color: #fff;
-  font-size: 1em;
+  font-size: 1.1em;
   background: #525252;
   border: none;
   border-radius: 2px 2px 0 0;
@@ -344,7 +373,7 @@ a {
   position: relative;
 }
 .contact form input[type="text"]:focus,
-.contact form textarea:focus {
+.contact form textarea:focus,.contact form input[type="email"]:focus {
   outline: none;
 }
 .contact form input[type="submit"] {
@@ -596,6 +625,58 @@ a {
   }
   100% {
     right: 4%;
+  }
+}
+
+@keyframes aboutanimation {
+  0%,20% {
+    transform: rotate(360deg);
+  }
+  25%,45%{
+    transform: rotate(270deg);
+  }
+  50%,70% {
+    transform: rotate(180deg);
+  }
+  75%,95%{
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes aboutbeforeanimation {
+  0%,20% {
+    transform: rotate(0deg);
+  }
+  25%,45%{
+    transform: rotate(90deg);
+  }
+  50%,70% {
+    transform: rotate(180deg);
+  }
+  75%,95%{
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes aboutafteranimation {
+  0%,20% {
+    transform: rotate(0deg);
+  }
+  25%,45%{
+    transform: rotate(90deg);
+  }
+  50%,70% {
+    transform: rotate(180deg);
+  }
+  75%,95%{
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .transition-img-overlay{

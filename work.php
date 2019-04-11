@@ -45,8 +45,8 @@
           </div>
           <div class="work-content transition-left">
             <h2><?php the_title(); ?></h2>
-            <h3><?php echo get_post_meta($post->ID,'taxonomy_value_key',true); ?></h3>
-            <p><?php the_content(); ?></p>
+            <h3><?php echo get_post_meta($post->ID,'_proj_value_key',true); ?></h3>
+            <p><?php the_excerpt(); ?></p>
             <a href="<?php echo get_permalink(get_the_ID()); ?>">View Project</a>
           </div>
         </div>

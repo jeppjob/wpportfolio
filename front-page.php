@@ -30,7 +30,9 @@
         }
         the_content();?>
          </div>
-         <div class="home-img"><img class="" src="<?php echo get_theme_mod('jc-home-image'); ?>"></div>
+         <div class="home-img">
+            
+            <img class="" src="<?php echo get_theme_mod('jc-home-image'); ?>"></div>
       </section>
    </div>
 

@@ -25,8 +25,8 @@
        <!-- My Work Section JC -->
        <section class="work-page">
        <div class="work-page-container">
-       <h2><?php the_title();?></h2>
-
+       <h2 class="work-page-title"><?php the_title();?></h2>
+       <h3 class="work-page-subtitle"><?php echo get_post_meta($post->ID,'_proj_value_key',true); ?></h3>
        <p>
        <?php
         while(have_posts()){
